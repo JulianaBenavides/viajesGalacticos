@@ -15,7 +15,7 @@ public class ViajesGalacticos {
     static String[] ships = { "Elyón", "Argos", "Deméter", };
     static double[] speed = { 50.000, 28.000, 30.000 };
  
-    // static double[] oxygen = { 1.209, 100.8 , 453.6 };
+    static double[] oxygen = { 1.209, 100.8, 453.6 };
     static double[] consumedFuel = { 450, 250, 350 };
  
     static int selectedShip;
@@ -267,5 +267,25 @@ public class ViajesGalacticos {
         }
 
         return selectedShip;
+    }
+
+    public static void randomEventsSolution() {
+ 
+        System.out.println();
+        System.out.println(" _____________________________________________________________________________");
+        System.out.println("|Para solucionar los problemas con la nave de forma automatica, presiona ENTER|");
+        System.out.println("|_____________________________________________________________________________|");
+       
+ 
+        var solution = read.nextLine();
+ 
+    }
+ 
+    public static void calculateResourse() {
+ 
+        double fuel = consumedFuel [selectedShip];
+        double oxygen = distances [selectedPlanet] * 100;
+        System.out.println("El combustible necesario para el viaje es: " + fuel);
+        System.out.println("La cantidad de oxigeno necesaria para este viaje es de: " + oxygen);
     }
 }
