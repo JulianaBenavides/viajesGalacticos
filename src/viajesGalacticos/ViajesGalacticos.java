@@ -166,5 +166,106 @@ public class ViajesGalacticos {
  
     }
 
-    
+    public static int selectPlanet() {
+
+        int option;
+        showtPlanet();
+        option = read.nextInt();
+
+        switch (option) {
+            case 1:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[0] + "]~~");
+                System.out.println(
+                        " Es el planeta más cercano al Sol, es pequeño y muy caliente durante el día, su distancia desde la tierra es aproximadamente "  + distances[0]);
+                break;
+            case 2:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[1] + "]~~");
+                System.out.println(
+                        "Su tamaño es parecido a la Tierra, su atmósfera es tóxica y con temperaturas extremas, su distancia desde la tierra es aproximadamente "
+                                + distances[1]);
+                break;
+            case 3:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[2] + "]~~");
+                System.out.println(
+                        "Es un planeta que tiene un color rojo, con montañas y cañones gigantes, es posible que tenga agua subterránea, su distancia desde la tierra es aproximadamente "
+                                + distances[2]);
+                break;
+            case 4:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[3] + "]~~");
+                System.out.println(
+                        "Es el planeta mas grande del sistema solar y esta compuesto de gases, tiene una Gran Mancha Roja y muchas lunas, su distancia desde la tierra es aproximadamente "
+                                + distances[3]);
+                break;
+            case 5:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[4] + "]~~");
+                System.out.println(
+                        "Famoso por sus brillantes anillos compuestos de hielo y roca, tiene más de 80 lunas y es el planeta menos denso por lo que podria flotar en el agua, su distancia desde la tierra es aproximadamente "
+                                + distances[4]);
+                break;
+            case 6:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[5] + "]~~");
+                System.out.println(
+                        "Es conocido como el gigante de hielo ya que es el planeta mas frio del sistema solar, con un tono azul verdoso debido al metano en su atmósfera, su distancia desde la tierra es aproximadamente "
+                                + distances[5]);
+                break;
+            case 7:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + planets[6] + "]~~");
+                System.out.println(
+                        "Es el planeta más lejano, frío y ventoso, de un color azul intenso, su distancia desde la tierra es aproximadamente "
+                                + distances[6]);
+                break;
+
+            default:
+                System.err.println("Planeta no valido");
+                break;
+        }
+        return selectedPlanet;
+
+    }
+
+     public static int selectShip() {
+
+        int option;
+        showShip();
+        option = read.nextInt();
+
+        switch (option) {
+            case 1:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + ships[0] + "]~~");
+                System.out.println(
+                        "Elyón es la nave más poderosa que tenemos, esta nave tiene una capacidad máxima de 8 tripulantes, tiene una capacidad de kg de oxigeno para alrededor de 6 meses, tambien cuenta con una capacidad de 45 toneladas de combustible y su velocidad es "
+                                + speed[0]);
+                break;
+
+            case 2:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + ships[1] + "]~~");
+                System.out.println(
+                        "Esta nave esta diseñada para carga útil por lo cual el máximo de tripulantes es de 4 personas. Su capacidad de oxigeno es kg para un solo mes. Su capacidad de combustible es 25 toneladas y cuenta con una velocidad de "
+                                + speed[1]);
+                break;
+
+            case 3:
+                System.out.println();
+                System.out.println("~~[Haz elegido " + ships[2] + "]~~");
+                System.out.println(
+                        "Deméter cuenta con un sistema de soporte vital avanzado, tiene una capacidad de 6 tripulantes, cuenta con una capacidad de kg de oxigeno para al rededor de 3 meses, tambien cuenta con una capacidad de 35 toneladas de combustible y su velocidad es "
+                                + speed[2]);
+                break;
+
+            default:
+                System.err.println("Opcion no valida");
+                break;
+        }
+
+        return selectedShip;
+    }
 }
