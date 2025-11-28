@@ -27,5 +27,76 @@ public class ViajesGalacticos {
  
     static boolean exit = false;
 
+     public static void travel() {
+
+        int option;
+
+        do {
+            showMenu();
+            option = read.nextInt();
+            switch (option) {
+                case 0:
+                    exit = true;
+
+                    break;
+                case 1:
+                    selectPlanet();
+
+                    break;
+                case 2:
+                    selectShip();
+
+                    break;
+                case 3:
+                    startTravel();
+                    break;
+                default:
+                    System.err.println("Opción incorrecta");
+
+            }
+        } while (!exit);
+        System.out.println();
+        System.out.println("--[!Gracias por utilizar el programa¡]--");
+        read.close();
+
+    }
+
+    public static void showMenu() {
+
+        System.out.println();
+        System.out.println(" ______________________");
+        System.out.println("/_____________________/|");
+        System.out.println("|       ______       | |");
+        System.out.println("| ====> [MENÚ] <==== | |");
+        System.out.println("|       ¨¨¨¨¨¨       | |");
+        System.out.println("|  1.Elegir planeta  | |");
+        System.out.println("|  2.Elegir nave     | |");
+        System.out.println("|  3.Iniciar viaje   | |");
+        System.out.println("|  0.Salir           | |");
+        System.out.println("|____________________|_|");
+        System.out.println();
+        System.out.print("====> Elegir opción: ");
+
+    }
+
+    
+    private static void showtPlanet() {
+
+        System.out.println(" _________________");
+        System.out.println("|___[PLANETAS]___|");
+        System.out.println("|                |");
+        System.out.println("|~~> 1. Mercurio |");
+        System.out.println("|~~> 2. Venus    |");
+        System.out.println("|~~> 3. Marte    |");
+        System.out.println("|~~> 4. Júpiter  |");
+        System.out.println("|~~> 5. Saturno  |");
+        System.out.println("|~~> 6. Urano    |");
+        System.out.println("|~~> 7. Neptuno  |");
+        System.out.println("|________________|");
+        System.out.println();
+        System.out.print("====> Elegir un planeta: ");
+
+    }
+
     
 }
