@@ -98,5 +98,73 @@ public class ViajesGalacticos {
 
     }
 
+    public static void showShip() {
+ 
+        System.out.println(" ______________________ ");
+        System.out.println("|________[NAVES]_______|");
+        System.out.println("|                      |");
+        System.out.println("|~~~> 1. Nave Argos    |");
+        System.out.println("|~~~> 2. Nave Deméter  |");
+        System.out.println("|~~~> 3. Nave Pegasus  |");
+        System.out.println("|______________________|");
+        System.out.println();
+        System.out.print("===> Elegir una nave: ");
+    }
+
+    public static void startTravel() {
+        calculateResourse();
+        Random random = new Random();
+        read.nextLine();
+        for (int progress = 0; progress <= 100; progress += 10) {
+            if (progress == 0) {
+                System.out.println("""
+                        |=====================================|
+                        |=========> INICIO DEL VIAJE <========|
+                        |=====================================|
+                        """);
+            }
+            if (progress == 20) {
+                System.out.println("""
+                        |=====================================|
+                        |=========> VIAJE EN PROCESO <========|
+                        |=====================================|
+                        """);
+            }
+            if (progress == 50) {
+                System.out.println("""
+                        |=====================================|
+                        |=========> MITAD DEL VIAJE <=========|
+                        |=====================================|
+                        """);
+ 
+                if (random.nextInt(10) < 3) {
+                    System.out.println("""
+                                   [!ALERTA¡] [!ALERTA¡] [!ALERTA¡] [!ALERTA¡] [!ALERTA¡] [!ALERTA¡]
+ 
+                            ~~~~~[Lluvia de meteoritos] [Lluvia de meteoritos] [Lluvia de meteoritos]~~~~ """);
+ 
+                    randomEventsSolution();
+                }
+            }
+            if (progress == 70) {
+                System.out.println("""
+                        |=====================================|
+                        |=========> VIAJE EN PROCESO <========|
+                        |=====================================|
+                        """);
+            }
+            if (progress == 100) {
+                System.out.println("""
+                        |=====================================|
+                        |======> HAZ LLEGADO AL DESTINO <=====|
+                        |=====================================|
+                        """);
+ 
+            }
+ 
+        }
+ 
+    }
+
     
 }
